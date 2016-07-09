@@ -19,3 +19,6 @@ reports/
 /.settings/
 /.classpath
 /.project
+
+*.tar.gz
+*.zip
