@@ -1,2 +1,11 @@
 language: java
-script: ant dist
+script: ant release
+deploy:
+  provider: releases
+  api_key:
+    secure: tEnasbttyvpMaAPrJF5nRUUMZUMTdasGcSEVhciRmwhiOR13FM6vDFPTwi6QYCKuy/C98uEoEhwZRUigY7ED+8LIgPyNO3YU8mqnQZiadIyTowGzN0FAbEcJvOtzHrlSrsfwBg3vI71230dr/X6OavGvI9tm7PVXvONGis+g83YQ6dl+FIexR038Ic0iQd6eydODgHtsueZm+EtEtT1n5nwtwV/64nAEn/izvBA1UsfcMjHqPgxNbJEiaFK6y30QdzfhlLf5RVgho1CFMx6FzQC3xVMbYLbMTzuiZ4feBVvWe5jQvEDLuwCsai6i87CF1VnnJm8Fstr+cdhpj34vE8lBbjdieS1DghY8knik2G/iUyu1+ryYCsHwtH5Rr5E4Am3jhfnMHJQkSovVpZK4vEPHLNBIwz+0KYF2oZgivYv11PGuO0idL7rGkSwf+TbuGlj2mFfEmibb044yjI9K/sWPlsTk2i4wV9oJEqITR+aBKwPaGeLkBSMmbuiQYpJe0zOW5KBwj0BWzMUHrSz5G6jLQqmpyl7x8jjV5SkjDpPStsi2f6F0b0E3MzQyV+72WqfsXhOl/pqXHVgt1LFvVroz1sjnwzQIRtcJoIsdkZsE0+6O6Z78yrj8lNThbKjZSDcpkPy3E1aW17oN2i0Aa0TuC1+HglMogFDQaIfCHz0=
+  file_glob: true
+  file: tattletale-*.zip
+  skip_cleanup: true
+  on:
+    tags: true
